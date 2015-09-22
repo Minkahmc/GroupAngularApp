@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ahoy Mateys!</title>
+
+	<link rel="stylesheet" media="screen" href="//netdna.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+	<link rel="stylesheet" media="screen" href="css/style.css">
+</head>
+<body ng-app="formApp">
+	<nav class="navbar navbar-default" role="navigation" ng-controller="HeaderController as vm">
+		<div class="navbar-header">
+			<a class="navbar-brand" href="#/">Captain Minkah's Crew</a>
+		</div>
+		<ul class="nav navbar-nav">
+			<li ng-class="{ active: vm.isActive('/')}"><a href="#/" class="pirateNav">Main Deck</a></li>
+			<li ng-class="{ active: vm.isActive('/crowsnest')}"><a href="#/instarrgram" class="pirateNav">Crow's Nest Instagram Images</a></li>
+			<li ng-class="{ active: vm.isActive('/parrottalk')} pirateNav"><a href="#/parrottalk" class="pirateNav">Parrots Talking Like Pirates!</a></li>
+			<li ng-class="{ active: vm.isActive('/ahoy')} pirateNav"><a href="#/ahoy" class="pirateNav">What's YOUR Pirate Name?</a></li>
+		</ul>
+		</div>
+	</nav>
+
+	<div class="container-fluid">
+		<ng-view></ng-view>
+	</div>
+
+	<div class="container-fluid">
+		<p class="text-right" style="color: #0C9694; font-size: .5em; letter-spacing: 2px;">Surrender yer treasure, ye scurvey lot of landlubbers!</p>
+	</div>
+
+	<script src="//code.jquery.com/jquery.js"></script>
+	<script src="//netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-route.js"></script>	
+	<script src="js/app.js"></script>
+	<script src="js/resultCtrl.js"></script>
+	<script src="js/service.js"></script>
+	<script type="text/javascript" src="js/parrottalk.js"></script>
+	<script type="text/javascript" src="js/instarrgram.js"></script>
+	<script type="text/javascript" src="js/ahoy.js"></script>
+</body>
+</html>
