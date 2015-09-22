@@ -1,0 +1,16 @@
+body {
+	background-image: url("../images/bg.jpg");
+	background-color: #92D1D0;
+	color:fff;
+	background-attachment: top center;
+}
+.pirateNav a{
+	text-decoration: none;
+	color:#095453;
+	list-style: none;
+}
+.pirateNav a:hover {
+	text-decoration: none;
+	color:#2E0954;
+	background:gray;
+}
