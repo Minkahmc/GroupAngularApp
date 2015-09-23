@@ -8,9 +8,33 @@ body {
 	text-decoration: none;
 	color:#095453;
 	list-style: none;
+	font-family: 'pirateNavStyle';
+	font-size: 80%;
 }
 .pirateNav a:hover {
 	text-decoration: none;
 	color:#2E0954;
 	background:gray;
+	font-family: 'pirateNavStyle';
+	font-size: 80%;
 }
+.404page {
+	text-align: center;
+	margin-left: 300px;
+}
+
+@font-face{ 
+	font-family: 'piratespeak';
+	src: url('../fonts/Caribbean.ttf') format('truetype')	    
+}
+@font-face{ 
+	font-family: 'pirateNavStyle';
+	src: url('../fonts/Windlass.ttf') format('truetype')	    
+}
+
+h3 {
+	font-family: 'piratespeak';
+	text-align: center;
+	color: #5C1718;
+}
+
