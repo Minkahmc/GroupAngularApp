@@ -53,9 +53,9 @@ app.controller('displayController', ['apiCall', '$scope', function(apiCall, $sco
   apiCall.link()
   	.then(function(response){
   		$scope.pirate = response.data.translation.pirate;
-      //pushes most recent pirate translation to oldQoutes[]
+      //calls push function from services page
       apiCall.push($scope.pirate);
-      $scope.oldQuotes = apiCall.blah();
+      $scope.oldQuotes = apiCall.toView();
   		apiCall.clear();
   	});
 

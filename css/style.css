@@ -60,14 +60,33 @@ h3 {
 	margin: 0 auto;
 }
 
+
+
+#prior-translated{
+	/* style for the div on the ng-repeat */
+}
+
+/* styles for the translation form */
+#form-input{
+	font-family: 'piratespeak';
+}
+
+/* style for translation display */
+
 #translation-display{
 	width: 70%;
 	margin: 0 auto;
 }
 
-#prior-translated{
-	/* style for the div on the ng-repeat */
+#translation-inner-div {
+	
 }
+
+#inner-translate-div h4{
+	font-family: 'piratespeak';
+	text-align: center;
+}
+
 
 /* styles from the instaApi files */
 body{

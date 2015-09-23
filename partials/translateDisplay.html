@@ -5,11 +5,12 @@
 
 	<h3> Woah, you speak pirate too? </h3>
 
-	<!-- <h4> "{{ pirate }}" </h4> -->
+	<div id="inner-translate-div">
+		 <h4 ng-repeat="quotes in oldQuotes"> "{{quotes}}" </h4>
 
-	<a class="btn btn-default" role="button" href="#/translate"> Translate Again </a>
-	<a class="btn btn-default" role="button" href="#/"> Back to Home </a>
-
-	<h4 ng-repeat="quotes in oldQuotes"> "{{quotes}}" </h4>
+		<a class="btn btn-default" role="button" href="#/translate"> Translate Again </a>
+		<a class="btn btn-default" role="button" href="#/"> Back to Home </a>
+	</div>
+	<!-- <h4 ng-repeat="quotes in oldQuotes"> "{{quotes}}" </h4> -->
 
 </div>
