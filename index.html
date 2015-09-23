@@ -12,16 +12,30 @@
 			<a class="navbar-brand MinkahBrand" href="#/"><span class="makeRed">Captain Minkah's Crew</span></a>
 		</div>
 		<ul class="nav navbar-nav pirateNav">
-			<li ng-class="{ active: vm.isActive('/')}"><a href="#/">Main Deck</a></li>
-			<li ng-class="{ active: vm.isActive('/instagram')}"><a href="#/instagram">Crow's Nest Instagram Images</a></li>
-			<li ng-class="{ active: vm.isActive('/translate')}"><a href="#/translate">Talk Like Pirates!</a></li>
-			<li ng-class="{ active: vm.isActive('/pirateName')}"><a href="#/pirateName">What's YOUR Pirate Name?</a></li>
+			<li ng-class="{ active: vm.isActive('/')}" ><a href="#/">Main Deck</a></li>
+			<li ng-class="{ active: vm.isActive('/instagram')}" ><a href="#/instagram">Crow's Nest Instagram Images</a></li>
+			<li ng-class="{ active: vm.isActive('/translate')}" ><a href="#/translate">Talk Like Pirates!</a></li>
+			<li ng-class="{ active: vm.isActive('/pirateName')}" ><a href="#/pirateName">What's YOUR Pirate Name?</a></li>
 		</ul>
 		</div>
 	</nav>
 
 
 	<div class="container-fluid wellpadded">
+					<!-- sahil instagram feed -->
+					<!-- <div id="divDisappear">
+					<div id="wrapper" onload="feed.run();">
+						<div id="insta-wrap">
+				            <img src="images/porthole.gif" id="frame">
+
+							<h3>Instagram pirate Feed</h3>
+								<div id='instafeed'> </div>
+								
+							<button id="loadmore">More</button>
+						</div>
+					</div>
+					</div> -->
+					<!-- sahil instagram feed -->
 		<div ng-app="pirateApp"> <!-- App call for the pirate translator functionality -->    
 			<ng-view></ng-view>
 		</div>
