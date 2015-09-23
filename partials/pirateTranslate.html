@@ -1,0 +1,13 @@
+<!-- Form for input for pirate talk translation -->
+
+<!-- May need some additional header info and instructions -->
+
+<form class="form-horizontal">
+  <div class="form-group">
+    <label for="exampleInputName1">English to Pirate Translator</label>
+    <input ng-model="pirateTalk" type="text" class="form-control" id="pirate" placeholder="Pirates don't use puncation, you can skip it too">
+  </div>
+  
+  <a ng-click="submit(pirateTalk)" role="button" class="btn btn-info" href="#/display">Translate to Pirate</a>
+  
+</form>

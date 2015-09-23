@@ -1,47 +1,33 @@
-var app = angular.module('formApp', ['ngRoute']);
+var app = angular.module('ajaxCall', ['ngRoute']);
 
 app.config(function($routeProvider){
-	$routeProvider
-		.when('/',
-		{
-			templateUrl: 'partials/form.html',
-			controller: 'FormController'
-		})
-		.when('/result',
-		{
-			templateUrl: 'partials/result.html',
-			controller: 'ResultController'
-		})
-		.when('/tom-waits',
-		{
-			templateUrl: 'partials/tom-waits.html',
-			controller: 'TomWaitsController'
-		})
-		.otherwise(
-		{
-			redirectTo: '/404',
-			templateUrl: 'partials/404.html'
-		});
+	$routeProvider.when('/', {
+		templateUrl: 'partials/pirateTranslate.html',
+		controller: 'formCtrl'
+	});
+
+	$routeProvider.when('/display', {
+		templateUrl: 'partials/translateDisplay.html',
+		controller: 'displayController'
+  });
+
 });
 
-app.controller('HeaderController', ['$location', function($location) {
-    var self = this;
+app.controller('formCtrl', function($scope, apiCall){
+  $scope.submit = function(x){
+  	apiCall.set(x);
+  	// console.log(x);
+  }  
+    
+});
 
-    self.isActive = function (viewLocation) { 
-        return viewLocation === $location.path();
-    };
+app.controller('displayController', ['apiCall', '$scope', function(apiCall, $scope){
+
+  apiCall.link()
+  	.then(function(response){
+  		$scope.pirate = response.data.translation.pirate;
+  		apiCall.clear();
+  	});
+
 }]);
 
-app.controller('FormController', ['$location', 'myService', function($location, myService) {
-	var self = this;
-
-	self.add = function() {
-		myService.add({
-			name: this.name, 
-			album: this.album
-		});
-		self.name = '';
-		self.album = '';
-		$location.path('/result');
-	};
-}]);
