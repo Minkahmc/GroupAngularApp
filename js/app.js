@@ -1,4 +1,4 @@
-var app = angular.module('ajaxCall', ['ngRoute']);
+var app = angular.module('pirateApp', ['ngRoute']);
 
 app.config(function($routeProvider){
 	$routeProvider.when('/', {
@@ -50,10 +50,12 @@ app.controller('formCtrl', function($scope, apiCall){
 });
 
 app.controller('displayController', ['apiCall', '$scope', function(apiCall, $scope){
-
   apiCall.link()
   	.then(function(response){
   		$scope.pirate = response.data.translation.pirate;
+      //pushes most recent pirate translation to oldQoutes[]
+      apiCall.push($scope.pirate);
+      $scope.oldQuotes = apiCall.blah();
   		apiCall.clear();
   	});
 

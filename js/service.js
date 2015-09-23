@@ -1,7 +1,8 @@
-var app = angular.module('ajaxCall');
+var app = angular.module('pirateApp');
 
 app.factory('apiCall', ['$http', function ($http){
 	var piratesArray = [];
+	var oldQuotes = [];
 	return {
 
 		set: function(whatev){
@@ -23,6 +24,12 @@ app.factory('apiCall', ['$http', function ($http){
 				}
 			// console.log(string);
 			return $http.get('http://isithackday.com/arrpi.php?text=' + string + '&format=json');	
+		},
+		push: function(x){
+			oldQuotes.push(x);
+		},
+		blah: function(){
+			return oldQuotes;
 		},
 
 		clear: function() {

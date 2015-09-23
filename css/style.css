@@ -38,3 +38,16 @@ h3 {
 	color: #5C1718;
 }
 
+.form-horizontal{
+	width: 70%;
+	margin: 0 auto;
+}
+
+#translation-display{
+	width: 70%;
+	margin: 0 auto;
+}
+
+#prior-translated{
+	/* style for the div on the ng-repeat */
+}
