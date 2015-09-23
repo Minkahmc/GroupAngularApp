@@ -26,9 +26,11 @@ app.factory('apiCall', ['$http', function ($http){
 			return $http.get('http://isithackday.com/arrpi.php?text=' + string + '&format=json');	
 		},
 		push: function(x){
+			//pushes latest version of pirate talk to array
 			oldQuotes.push(x);
 		},
-		blah: function(){
+		toView: function(){
+			//returns the array so it can be put on the scope and used for display
 			return oldQuotes;
 		},
 
