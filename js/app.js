@@ -2,14 +2,42 @@ var app = angular.module('ajaxCall', ['ngRoute']);
 
 app.config(function($routeProvider){
 	$routeProvider.when('/', {
+    templateUrl: 'partials/placeHolder.html',
+    controller: 'indexController'
+  });
+
+  $routeProvider.when('/instagram', {
+    templateUrl: 'partials/instagram.html',
+    controller: 'instagramController'
+  });
+
+  $routeProvider.when('/translate', {
 		templateUrl: 'partials/pirateTranslate.html',
 		controller: 'formCtrl'
 	});
 
 	$routeProvider.when('/display', {
-		templateUrl: 'partials/translateDisplay.html',
-		controller: 'displayController'
+    templateUrl: 'partials/translateDisplay.html',
+    controller: 'displayController'
   });
+
+  $routeProvider.when('/pirateName', {
+		templateUrl: 'partials/pirateName.html',
+		controller: 'nameController'
+  });
+
+  $routeProvider.otherwise({
+    templateUrl: 'partials/404.html',
+    controller: '404controller'
+  });
+
+});
+
+app.controller('indexController', function(){
+
+});
+
+app.controller('instagramController', function(){
 
 });
 
@@ -30,4 +58,12 @@ app.controller('displayController', ['apiCall', '$scope', function(apiCall, $sco
   	});
 
 }]);
+
+app.controller('nameController', function(){
+
+});
+
+app.controller('404controller', function(){
+
+});
 
