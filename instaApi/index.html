@@ -1,0 +1,50 @@
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="main.css">
+	
+	<script type="text/javascript" src="instafeed.min.js"></script>
+	<script type="text/javascript" href="jquery-2.1.4.j10"></script>
+
+ 
+</head>
+<body>
+	<div id="wrapper">
+		<div id="insta-wrap">
+            <img src="porthole.gif" id="frame">
+
+			<h3>Instagram pirate Feed</h3>
+				<div id="instafeed">
+
+
+					
+				
+			</div>
+			<button id="loadmore">More</button>
+		</div>
+	</div>
+<script type="text/javascript">
+    var feed = new Instafeed({
+        get: 'tagged',
+        tagName: 'ocean',
+        
+        resolution: 'standard_resolution',
+        limit: 1,
+        clientId: '164ba7ffcb0f47499526b2ea46ea5172'
+    });
+    document.getElementById('loadmore').addEventListener('click',function(){
+
+    	var test = document.getElementById('instafeed')
+    	console.log(test);
+    	test.innerHTML= feed.next();
+    	test.textContent=" ";
+    	// document.getElementById('instafeed').innerHTML(feed.next());
+    	
+    });
+    feed.run();
+    
+
+
+    </script>
+  
+</body>
+</html>
