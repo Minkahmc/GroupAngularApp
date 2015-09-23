@@ -1,8 +1,16 @@
 body {
-	background-image: url("../images/bg.jpg");
+/*	background-image: url("../images/bg.jpg"); */
 	background-color: #92D1D0;
 	color:fff;
 	background-attachment: top center;
+}
+.MinkahBrand {
+	font-family: 'piratespeak';
+	color: #5C1718;
+	font-size: 110%;
+}
+.makeRed {
+	color: #5C1718;
 }
 .pirateNav a{
 	text-decoration: none;
@@ -36,5 +44,14 @@ h3 {
 	font-family: 'piratespeak';
 	text-align: center;
 	color: #5C1718;
+}
+.bottomcorner {
+	position:fixed;
+	bottom: 0px;
+    right: 10px;
+    color: #5C1718;
+}
+.wellpadded {
+	padding: 0px 45px;
 }
 

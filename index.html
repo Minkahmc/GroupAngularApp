@@ -9,7 +9,7 @@
 <body>
 	<nav class="navbar navbar-default" role="navigation" ng-controller="HeaderController as vm">
 		<div class="navbar-header">
-			<a class="navbar-brand" href="#/">Captain Minkah's Crew</a>
+			<a class="navbar-brand MinkahBrand" href="#/"><span class="makeRed">Captain Minkah's Crew</span></a>
 		</div>
 		<ul class="nav navbar-nav pirateNav">
 			<li ng-class="{ active: vm.isActive('/')}"><a href="#/">Main Deck</a></li>
@@ -20,14 +20,14 @@
 		</div>
 	</nav>
 
-	<div class="container-fluid">
+	<div class="container-fluid wellpadded">
 		<div ng-app="ajaxCall"> <!-- App call for the pirate translator functionality -->    
 			<ng-view></ng-view>
 		</div>
 	</div>
 
 	<div class="container-fluid">
-		<p class="text-right" style="color: #0C9694; font-size: .5em; letter-spacing: 2px;">Surrender yer treasure, ye scurvey lot of landlubbers!</p>
+		<p class="text-right bottomcorner" style="font-size: .5em; letter-spacing: 2px;">Surrender yer treasure, ye scurvey lot of landlubbers!</p>
 	</div>
 
 	<script src="//code.jquery.com/jquery.js"></script>
@@ -35,6 +35,14 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-route.js"></script>	
 	<script src="js/app.js"></script>
+	<script src="js/resultCtrl.js"></script>
 	<script src="js/service.js"></script>
+	<script type="text/javascript" src="js/parrottalk.js"></script>
+	<script type="text/javascript" src="js/instarrgram.js"></script>
+	<script type="text/javascript" src="js/ahoy.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script src="js/jquery.backstretch.min.js"></script>
+	<script src="js/backstretchscript.js"></script>
+
 </body>
 </html>
