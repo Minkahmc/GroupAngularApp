@@ -1,9 +1,4 @@
-
-<html>
-<head></head>
-<body onload="generator()">
-<script type="text/javascript">
-function generator(){
+		function generator(){
 			// Add your own words to the wordlist. Be carefull to obey the showed syntax
 			
 			var wordlist1 = ["Cool","Masked","Bloody","Lame","Big","Stupid","Drunk","Rotten",
@@ -33,20 +28,3 @@ function generator(){
 			element.appendChild(document.createTextNode(name));
 			document.getElementById("placeholder").appendChild(element);
 		}
-		</script>
-
-<h2 class="shrunkenHead">Feeling a bit scurvey?</h2>
-		<div id="generator">
-			<div id="placeholder">
-			</div>	
-		</div>
-		<div ID="ButtonIt">
-			<input type="button" value="Make Me a Pirate!" onclick="generator()" / class="nameMe">
-			</div>
-		
-
-
-<script src="../js/newName.js"></script>
-</div>
-</body>
-</html>
