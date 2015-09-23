@@ -30,7 +30,7 @@ app.controller('displayController', ['apiCall', '$scope', function(apiCall, $sco
   apiCall.link()
   	.then(function(response){
   		$scope.pirate = response.data.translation.pirate;
-  		
+  		apiCall.clear();
   	});
 
 	

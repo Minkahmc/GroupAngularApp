@@ -1,23 +1,35 @@
 var app = angular.module('ajaxCall');
 
 app.factory('apiCall', ['$http', function ($http){
-	var pirates;
+	var piratesArray = [];
 	return {
-		// talk: function(){
-		// 	return pirates;
-		// },
+
 		set: function(whatev){
-			pirates = whatev;
-			console.log(pirates);
-			return pirates;
-			// return $http.get('http://isithackday.com/arrpi.php?text=hello+friend+quick&format=json');
+			var splitWords = whatev.split(" ");
+			console.log(splitWords);
+			for (i=0; i<splitWords.length; i++) {
+				piratesArray.push(splitWords[i]);
+			}
+
+			// console.log(piratesArray);
+		
 		},
 		link: function(){
-			return $http.get('http://isithackday.com/arrpi.php?text=hello+friend+quick&format=json');
+			// console.log(piratesArray[0]);
+			// console.log(piratesArray.length);
+			var string="";
+			for (i=0; i<piratesArray.length; i++) {
+				string += piratesArray[i] + "+";
+				}
+			// console.log(string);
+			return $http.get('http://isithackday.com/arrpi.php?text=' + string + '&format=json');	
+		},
+
+		clear: function() {
+			piratesArray= [];
 		}
 		
 	}
-	// console.log(pirates);
-	// return $http.get('http://isithackday.com/arrpi.php?text=' + pirates + '&format=json');
+	
 	
 }]);
