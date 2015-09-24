@@ -1,3 +1,7 @@
+.p-tag {
+	text-align: center;
+}
+
 body {
 /*	background-image: url("../images/bg.jpg"); */
 	background-color: #92D1D0;
@@ -133,6 +137,7 @@ button {
 	top: 400px;
 }
 
+<<<<<<< HEAD
 .title {
 	position: absolute;
 	left: 350px;
@@ -157,5 +162,16 @@ button {
 	left:70%;
 	z-index: 999;
 	cursor: pointer;
+}
+
+
+.pirateStyleButton {
+	font-family: 'piratespeak';
+	color: #5C1718;
+	font-size: 100%;
+	padding:5px;
+	border-radius: 15px;
+	border-color:#5C1718;
+	border-style: solid double 2px;
 }
 

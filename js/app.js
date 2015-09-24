@@ -33,6 +33,15 @@ app.config(function($routeProvider){
 
 });
 
+// !!!!!!!!! this kills the instagram partial if live. !!!!!!!!!!!!!!!!
+// app.controller('HeaderController', ['$location', function($location) {
+//     var self = this;
+// ​
+//     self.isActive = function (viewLocation) { 
+//         return viewLocation === $location.path();
+//     };
+// }]);
+
 app.controller('indexController', function(){
 
 });
@@ -68,4 +77,7 @@ app.controller('nameController', function(){
 app.controller('404controller', function(){
 
 });
+
+
+
 
