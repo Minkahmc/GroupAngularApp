@@ -2,7 +2,7 @@ setTimeout(function(){
 
     var feed = new Instafeed({
             get: 'tagged',
-            tagName: 'ocean',
+            tagName: 'madeofocean',
             
             resolution: 'standard_resolution',
             limit: 1,
