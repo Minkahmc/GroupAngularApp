@@ -1,47 +1,71 @@
-var app = angular.module('formApp', ['ngRoute']);
+var app = angular.module('pirateApp', ['ngRoute']);
 
 app.config(function($routeProvider){
-	$routeProvider
-		.when('/',
-		{
-			templateUrl: 'partials/form.html',
-			controller: 'FormController'
-		})
-		.when('/result',
-		{
-			templateUrl: 'partials/result.html',
-			controller: 'ResultController'
-		})
-		.when('/tom-waits',
-		{
-			templateUrl: 'partials/tom-waits.html',
-			controller: 'TomWaitsController'
-		})
-		.otherwise(
-		{
-			redirectTo: '/404',
-			templateUrl: 'partials/404.html'
-		});
+	$routeProvider.when('/', {
+    templateUrl: 'partials/placeHolder.html',
+    controller: 'indexController'
+  });
+
+  $routeProvider.when('/instagram', {
+    templateUrl: 'partials/instagram.html',
+    controller: 'instagramController'
+  });
+
+  $routeProvider.when('/translate', {
+		templateUrl: 'partials/pirateTranslate.html',
+		controller: 'formCtrl'
+	});
+
+	$routeProvider.when('/display', {
+    templateUrl: 'partials/translateDisplay.html',
+    controller: 'displayController'
+  });
+
+  $routeProvider.when('/pirateName', {
+		templateUrl: 'partials/pirateName.html',
+		controller: 'nameController'
+  });
+
+  $routeProvider.otherwise({
+    templateUrl: 'partials/404.html',
+    controller: '404controller'
+  });
+
 });
 
-app.controller('HeaderController', ['$location', function($location) {
-    var self = this;
+app.controller('indexController', function(){
 
-    self.isActive = function (viewLocation) { 
-        return viewLocation === $location.path();
-    };
+});
+
+app.controller('instagramController', function(){
+
+});
+
+app.controller('formCtrl', function($scope, apiCall){
+  $scope.submit = function(x){
+  	apiCall.set(x);
+  	// console.log(x);
+  }  
+    
+});
+
+app.controller('displayController', ['apiCall', '$scope', function(apiCall, $scope){
+  apiCall.link()
+  	.then(function(response){
+  		$scope.pirate = response.data.translation.pirate;
+      //calls push function from services page
+      apiCall.push($scope.pirate);
+      $scope.oldQuotes = apiCall.toView();
+  		apiCall.clear();
+  	});
+
 }]);
 
-app.controller('FormController', ['$location', 'myService', function($location, myService) {
-	var self = this;
+app.controller('nameController', function(){
 
-	self.add = function() {
-		myService.add({
-			name: this.name, 
-			album: this.album
-		});
-		self.name = '';
-		self.album = '';
-		$location.path('/result');
-	};
-}]);
+});
+
+app.controller('404controller', function(){
+
+});
+

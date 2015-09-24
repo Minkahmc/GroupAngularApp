@@ -5,38 +5,49 @@
 
 	<link rel="stylesheet" media="screen" href="//netdna.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 	<link rel="stylesheet" media="screen" href="css/style.css">
+	<link rel="stylesheet" media="screen" href="css/pirateNameStyle.css">
 </head>
-<body ng-app="formApp">
+<body>
 	<nav class="navbar navbar-default" role="navigation" ng-controller="HeaderController as vm">
 		<div class="navbar-header">
-			<a class="navbar-brand" href="#/">Captain Minkah's Crew</a>
+			<a class="navbar-brand MinkahBrand" href="#/"><span class="makeRed">Captain Minkah's Crew</span></a>
 		</div>
-		<ul class="nav navbar-nav">
-			<li ng-class="{ active: vm.isActive('/')}"><a href="#/" class="pirateNav">Main Deck</a></li>
-			<li ng-class="{ active: vm.isActive('/crowsnest')}"><a href="#/instarrgram" class="pirateNav">Crow's Nest Instagram Images</a></li>
-			<li ng-class="{ active: vm.isActive('/parrottalk')} pirateNav"><a href="#/parrottalk" class="pirateNav">Parrots Talking Like Pirates!</a></li>
-			<li ng-class="{ active: vm.isActive('/ahoy')} pirateNav"><a href="#/ahoy" class="pirateNav">What's YOUR Pirate Name?</a></li>
+		<ul class="nav navbar-nav pirateNav">
+			<li ng-class="{ active: vm.isActive('/')}"><a href="#/">Main Deck</a></li>
+			<li ng-class="{ active: vm.isActive('/instagram')}"><a href="#/instagram">Crow's Nest Instagram Images</a></li>
+			<li ng-class="{ active: vm.isActive('/translate')}"><a href="#/translate">Talk Like Pirates!</a></li>
+			<li ng-class="{ active: vm.isActive('/pirateName')}"><a href="#/pirateName">What's YOUR Pirate Name?</a></li>
 		</ul>
 		</div>
 	</nav>
 
-	<div class="container-fluid">
-		<ng-view></ng-view>
+
+	<div class="container-fluid wellpadded">
+		<div ng-app="pirateApp"> <!-- App call for the pirate translator functionality -->    
+			<ng-view></ng-view>
+		</div>
 	</div>
 
 	<div class="container-fluid">
-		<p class="text-right" style="color: #0C9694; font-size: .5em; letter-spacing: 2px;">Surrender yer treasure, ye scurvey lot of landlubbers!</p>
+		<p class="text-right bottomcorner" style="font-size: .5em; letter-spacing: 2px;">Surrender yer treasure, ye scurvey lot of landlubbers!</p>
 	</div>
 
-	<script src="//code.jquery.com/jquery.js"></script>
+	
+	<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script src="js/jquery-2.1.4.js"></script>
 	<script src="//netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-route.js"></script>	
 	<script src="js/app.js"></script>
-	<script src="js/resultCtrl.js"></script>
 	<script src="js/service.js"></script>
-	<script type="text/javascript" src="js/parrottalk.js"></script>
-	<script type="text/javascript" src="js/instarrgram.js"></script>
-	<script type="text/javascript" src="js/ahoy.js"></script>
+	<script src="js/instafeed.min.js" type="text/javascript" ></script>
+<!-- 	// <script type="text/javascript" src="js/parrottalk.js"></script>
+	// <script type="text/javascript" src="js/instarrgram.js"></script> -->
+	 <!-- <script type="text/javascript" src="js/ahoy.js"></script> -->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script src="js/jquery.backstretch.min.js"></script>
+	<script src="js/backstretchscript.js"></script>
+	<script src="js/instagramFeed.js"></script>
+
 </body>
 </html>

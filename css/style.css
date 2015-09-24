@@ -1,16 +1,161 @@
 body {
-	background-image: url("../images/bg.jpg");
+/*	background-image: url("../images/bg.jpg"); */
 	background-color: #92D1D0;
 	color:fff;
 	background-attachment: top center;
+}
+.MinkahBrand {
+	font-family: 'piratespeak';
+	color: #5C1718;
+	font-size: 110%;
+}
+.makeRed {
+	color: #5C1718;
 }
 .pirateNav a{
 	text-decoration: none;
 	color:#095453;
 	list-style: none;
+	font-family: 'pirateNavStyle';
+	font-size: 80%;
 }
 .pirateNav a:hover {
 	text-decoration: none;
 	color:#2E0954;
 	background:gray;
+	font-family: 'pirateNavStyle';
+	font-size: 80%;
 }
+.404page {
+	text-align: center;
+	margin-left: 300px;
+}
+
+@font-face{ 
+	font-family: 'piratespeak';
+	src: url('../fonts/Caribbean.ttf') format('truetype')	    
+}
+@font-face{ 
+	font-family: 'pirateNavStyle';
+	src: url('../fonts/Windlass.ttf') format('truetype')	    
+}
+
+h3 {
+	font-family: 'piratespeak';
+	text-align: center;
+	color: #5C1718;
+}
+.bottomcorner {
+	position:fixed;
+	bottom: 0px;
+    right: 10px;
+    color: #5C1718;
+}
+.wellpadded {
+	padding: 0px 45px;
+}
+
+.form-horizontal{
+	width: 70%;
+	margin: 0 auto;
+}
+
+
+
+#prior-translated{
+	/* style for the div on the ng-repeat */
+}
+
+/* styles for the translation form */
+#form-input{
+	font-family: 'piratespeak';
+}
+
+/* style for translation display */
+
+#translation-display{
+	width: 70%;
+	margin: 0 auto;
+}
+
+#translation-inner-div {
+	
+}
+
+#inner-translate-div h4{
+	font-family: 'piratespeak';
+	text-align: center;
+}
+
+
+/* styles from the instaApi files */
+body{
+	background: #999;
+	margin:0;
+	padding:0;
+}
+
+#insta-wrap {
+	width: 1280px;
+	height: 600px;
+	margin: 35px auto 0 auto;
+}
+
+h1 {
+	text-align: center;
+	color: #FFF;
+	
+	text-transform: uppercase;
+	letter-spacing: 1.5px;
+	text-shadow: #666 2px 2px;
+
+}
+
+#instafeed img{
+	opacity: 0.8;
+	position: absolute;
+	z-index: -99;
+	min-width: 500px;
+	max-height: 500px;
+	left: 320px;
+	top: 250px;
+
+}
+
+#frame{
+	position: absolute;
+	left: 70px;
+	top: 200px;
+}
+
+button {
+	position: absolute;
+	top: 400px;
+}
+
+.title {
+	position: absolute;
+	left: 350px;
+}
+
+#loadmore {
+	margin: 20px auto;
+    font-weight: bold;
+    padding: 50px 0 20px;
+    text-align: center;
+    font-family: 'piratespeak';
+	color: #5C1718;
+	font-size: 200%;
+	padding:5px;
+	border-radius: 15px;
+	border: 2px solid #5C1718;
+	position:fixed;
+	margin:0 auto;
+	width:200px;
+	background-color: LightGray;
+	top:80%;
+	left:70%;
+	z-index: 999;
+	cursor: pointer;
+}
+
